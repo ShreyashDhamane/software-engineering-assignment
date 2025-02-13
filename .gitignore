@@ -27,3 +27,31 @@ pip-delete-this-directory.txt
 # # SQLite database (if applicable)
 # db.sqlite3
 # *.sqlite3
+
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# JetBrains (PyCharm, etc.)
+.idea/
+
+# Ignore Docker files if using containers
+docker-compose.override.yml
+docker-compose.override.yaml
+.dockerignore
+
+# AWS credentials and config (ensure security)
+.aws/
+*.pem
+
+# Static and media files (recommended to store in S3)
+staticfiles/
+media/
+
+# Logs and temp files
+logs/
+*.log
+*.out
+*.err
+nohup.out
