@@ -1,0 +1,29 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+*.egg
+
+# Virtual environment
+venv/
+env/
+*.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django secret and settings (if using local overrides)
+.env
+*.env
+/config/settings/local.py
+/config/settings/.local/
+
+# # SQLite database (if applicable)
+# db.sqlite3
+# *.sqlite3
