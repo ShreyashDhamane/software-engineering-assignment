@@ -57,6 +57,8 @@ TEMPLATES = [
     },
 ]
 
+#comment
+
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
