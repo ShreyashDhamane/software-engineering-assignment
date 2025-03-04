@@ -31,7 +31,7 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   region: "us-west-2"  # Update to your AWS region
   app: "django-tutorial"  # Update to your EB application name
-  env: "django-poll"  # Update to your EB environment name
+  env: "django-env"  # Update to your EB environment name
   bucket: $AWS_S3_BUCKET  # Update to your S3 bucket name
   bucket_path: "django-poll"  # Update to your S3 bucket path
   cleanup: false
