@@ -1,12 +1,35 @@
+# .travis.yml
+
+# Specify the language and versions
 language: python
 python:
   - "3.8"
   - "3.9"
   - "3.10"
-  - "3.11"
-  - "3.12"
-  - "3.13"
-install: 
+
+# Use the latest stable version of Django
+env:
+  - DJANGO_VERSION=5.1.6
+
+# Install dependencies
+install:
   - pip install -r requirements.txt
+  - pip install django==$DJANGO_VERSION
+
+# No need for additional services like PostgreSQL or MySQL
+# SQLite3 is included by default in Python
+
+# Run migrations and tests
 script:
-  - pytest
+  - python manage.py migrate
+  - python manage.py test
+
+# Cache pip dependencies to speed up builds
+cache:
+  pip: true
+
+# Notifications (optional)
+notifications:
+  email:
+    on_success: never
+    on_failure: always
